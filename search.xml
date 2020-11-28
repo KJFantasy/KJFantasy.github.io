@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo写文章的注意事项</title>
+    <url>/2020/11/29/hexo%E5%86%99%E6%96%87%E7%AB%A0%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<h4 id="生成文件方式"><a href="#生成文件方式" class="headerlink" title="生成文件方式"></a>生成文件方式</h4><p>在hexo的根目录使用命令<code>hexo new &quot;文件名，也是文章标题&quot;</code>，会自动生成带有Front-matter的md文件，推荐使用。</p>
+<p>其次，也可以直接在hexo的根目录下的source文件夹下的_post文件夹中新建md文件，然后自己按Front-matter的格式定义文章信息。</p>
+<h4 id="存放文件夹"><a href="#存放文件夹" class="headerlink" title="存放文件夹"></a>存放文件夹</h4><p>使用由于next主题中也有一个source文件夹，所以有时候会跑到主题的文件夹中去，但只要记得文章就是存放在_post文件夹下，另外，文章的层级也不属于主题，还是很容易区分的。</p>
+<h4 id="文章字号"><a href="#文章字号" class="headerlink" title="文章字号"></a>文章字号</h4><p>在typora编辑器中，文章内容的小标题采用四级标题比较合适，这样文章内容的标题在hexo上显示就不会超过文章的标题，造成头轻脚重的现象，便于阅读。</p>
+<h4 id="Front-matter信息格式问题"><a href="#Front-matter信息格式问题" class="headerlink" title="Front-matter信息格式问题"></a>Front-matter信息格式问题</h4><p>在Front-matter中定义tags和categories的信息时，注意格式问题。</p>
+<p><code> - hexo</code></p>
+<ul>
+<li>具体定义的信息需要换行</li>
+<li>“-”的左右必须各有一个空格，否则在<code>hexo g</code>生成文件时会报错</li>
+<li>在Front-matter中是可以使用#来写注释的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常用命令</title>
+    <url>/2020/10/02/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h4 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h4><p><code>hexo clean</code></p>
+<ul>
+<li>清除缓存文件 db.json 和已生成的静态文件 public </li>
+<li>网站显示异常时可以执行这条命令试试</li>
+</ul>
+<h4 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h4><p><code>hexo g</code></p>
+<ul>
+<li><p>生成网站静态文件到默认设置的 public 文件夹</p>
+</li>
+<li><p>便于查看网站生成的静态文件或者手动部署网站</p>
+</li>
+<li><p>如果使用自动部署，不需要先执行该命令</p>
+</li>
+<li><p>hexo g 是 hexo generate 的缩写，命令效果一致</p>
+</li>
+</ul>
+<h4 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h4><p><code>hexo s</code></p>
+<ul>
+<li>启动本地服务器，用于预览主题。默认地址： <a href="http://localhost:4000/">http://localhost:4000/</a></li>
+<li>要想本地预览效果必须先打开server</li>
+<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可</li>
+<li>对 Hexo 根目录 _config.yml 的修改，需要重启本地服务器后才能预览效果</li>
+</ul>
+<h4 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h4><p><code>hexo d</code></p>
+<ul>
+<li><p>自动生成网站静态文件，并部署到设定的仓库</p>
+</li>
+<li><p>hexo d 是 hexo deploy 的缩写，命令效果一致</p>
+</li>
+</ul>
+<h4 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h4><p><code>hexo new &quot;学习笔记&quot;</code></p>
+<ul>
+<li><p>新建一篇标题为”学习笔记”的文章，因为标题里有空格，所以加上了引号</p>
+</li>
+<li><p>文章标题可以在对应 md 文件里改，新建时标题可以写的简单些</p>
+</li>
+</ul>
+<h4 id="hexo-new-page"><a href="#hexo-new-page" class="headerlink" title="hexo new page"></a>hexo new page</h4><p><code>hexo new page aboutme</code></p>
+<ul>
+<li><p>新建一个标题为 aboutme 的页面，默认链接地址为 主页地址/aboutme/</p>
+</li>
+<li><p>标题可以为中文，但一般习惯用英文</p>
+</li>
+<li><p>页面标题和文章一样可以随意修改</p>
+</li>
+<li><p>页面不会出现在首页文章列表和归档中，也不支持设置分类和标签</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>hexo常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签、分类的区别以及Front-matter的使用</title>
+    <url>/2020/11/29/%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB%E4%BB%A5%E5%8F%8AFront-matter%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="标签、分类的区别"><a href="#标签、分类的区别" class="headerlink" title="标签、分类的区别"></a>标签、分类的区别</h4><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
+<h4 id="Front-matter的使用"><a href="#Front-matter的使用" class="headerlink" title="Front-matter的使用"></a>Front-matter的使用</h4><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定文件信息的变量，以下是预先定义的参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td><code>updated</code></td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>categories</code></td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>Front-matter</tag>
+      </tags>
+  </entry>
+</search>
